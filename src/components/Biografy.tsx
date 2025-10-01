@@ -13,7 +13,6 @@ const Biografy: React.FC = () => {
   const sectionsRef = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
-    const triggers: ScrollTrigger[] = [];
     sectionsRef.current.forEach((section) => {
       if (section) {
         gsap.fromTo(
