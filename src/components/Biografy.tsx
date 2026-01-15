@@ -150,7 +150,7 @@ const Biografy: React.FC = () => {
                 className="max-w-full max-h-[80vh] object-contain bg-black"
               />
               <button
-                className="absolute top-2 right-2 text-white text-2xl font-bold cursor-pointer rounded-full px-3"
+                className="absolute top-2 right-2 text-white text-2xl font-bold cursor-pointer rounded-full bg-black/70 px-3"
                 onClick={() => setActiveImage(null)}
               >
                 X
