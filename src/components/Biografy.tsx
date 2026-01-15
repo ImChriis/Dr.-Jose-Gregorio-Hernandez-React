@@ -49,12 +49,16 @@ const Biografy: React.FC = () => {
         className="flex items-center space-x-4 w-[90%]"
         ref={el => { sectionsRef.current[0] = el; }}
       >
-        <img
+        <div className="w-[50%]">
+          <img
           src={child}
           alt="José Gregorio Hernández"
-          className="w-[30%] h-full object-cover rounded cursor-pointer"
+          className="w-[80%] h-full object-cover rounded cursor-pointer"
           onClick={() => setActiveImage(child)}
-        />
+          />
+
+          <label>Click para ampliar</label>
+        </div>
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Infancia y origenes</h1>
           <p className="text-wrap-normal text-lg">José Gregorio Hernández Cisneros nació el 26 de octubre de 1864 en Isnotú, un pequeño pueblo enclavado en las montañas del estado Trujillo, Venezuela. Sus padres, Benigno María Hernández Manzaneda y Josefa Antonia Cisneros, le transmitieron una profunda fe cristiana y valores de humildad, honradez y solidaridad.</p>
@@ -67,12 +71,16 @@ const Biografy: React.FC = () => {
         className="flex items-center space-x-4 w-[90%]"
         ref={el => { sectionsRef.current[1] = el; }}
       >
-        <img
+        <div className="w-[50%]">
+          <img
           src={formation}
           alt="José Gregorio Hernández"
-          className="w-[30%] h-full object-cover rounded cursor-pointer"
+          className="w-[80%] h-full object-cover rounded cursor-pointer"
           onClick={() => setActiveImage(formation)}
         />
+
+        <label>Click para ampliar</label>
+        </div>
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Formación Académica</h1>
           <p className="text-wrap-normal text-lg">A la edad de trece años, dejó atrás a su familia y su tierra natal para trasladarse a Caracas, con el propósito de continuar sus estudios. Fue una etapa llena de sacrificios, pues la separación del calor de su hogar no fue fácil, pero también fue un período de grandes oportunidades que marcarían su futuro.</p>
@@ -85,12 +93,16 @@ const Biografy: React.FC = () => {
         className="flex items-center space-x-4 w-[90%]"
         ref={el => { sectionsRef.current[2] = el; }}
       >
-        <img
+        <div className="w-[50%]">
+           <img
           src={medicine}
           alt="José Gregorio Hernández"
-          className="w-[30%] h-full object-cover rounded cursor-pointer"
+          className="w-[80%] h-full object-cover rounded cursor-pointer"
           onClick={() => setActiveImage(medicine)}
         />
+
+        <label>Click para ampliar</label>
+        </div>
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Médico y Profesor Universitario</h1>
           <p className="text-wrap-normal text-lg">En 1891, José Gregorio regresó a Venezuela cargado de conocimientos y con una clara misión: transformar la medicina en su país. Fue nombrado profesor en la Universidad Central de Venezuela, donde introdujo asignaturas y métodos modernos que hasta entonces eran desconocidos en el país, como la bacteriología, la histología y la fisiología experimental. También fundó y organizó laboratorios, dando un impulso trascendental al desarrollo científico en la nación.</p>
@@ -103,12 +115,16 @@ const Biografy: React.FC = () => {
         className="flex items-center space-x-4 w-[90%]"
         ref={el => { sectionsRef.current[3] = el; }}
       >
-        <img
+        <div className="w-[50%]">
+           <img
           src={religion}
           alt="José Gregorio Hernández"
-          className="w-[30%] h-full object-cover rounded cursor-pointer"
+          className="w-[80%] h-full object-cover rounded cursor-pointer"
           onClick={() => setActiveImage(religion)}
         />
+
+        <label>Click para ampliar</label>
+        </div>
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Vida Espiritual y Vocación Religiosa</h1>
           <p className="text-wrap-normal text-lg">Aunque la medicina fue su camino principal, José Gregorio también sintió desde joven un profundo llamado religioso. Su deseo de servir a Dios lo llevó en varias ocasiones a ingresar a seminarios y conventos, con la intención de convertirse en sacerdote.</p>
@@ -121,12 +137,16 @@ const Biografy: React.FC = () => {
         className="flex items-center space-x-4 w-[90%]"
         ref={el => { sectionsRef.current[4] = el; }}
       >
-        <img
+        <div className="w-[50%]">
+            <img
           src={legacy}
           alt="José Gregorio Hernández"
-          className="w-[30%] object-cover rounded cursor-pointer"
+          className="w-[80%] object-cover rounded cursor-pointer"
           onClick={() => setActiveImage(legacy)}
         />
+
+        <label>Click para ampliar</label>
+        </div>
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Fallecimiento</h1>
           <p className="text-wrap-normal text-lg">El 29 de junio de 1919, a los 54 años de edad, la vida de José Gregorio Hernández tuvo un desenlace inesperado y trágico. Mientras se dirigía a comprar medicinas para una enferma a la que atendía, fue atropellado por un automóvil en La Pastora, Caracas.</p>

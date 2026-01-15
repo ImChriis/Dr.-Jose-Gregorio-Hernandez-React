@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 html{
-  color-scheme: light dark;
+  /* color-scheme: light dark; */
+  background-color: #121212;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, div, a, li, button {
+  color: #ffffff;
 }
