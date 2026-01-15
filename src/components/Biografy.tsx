@@ -57,7 +57,7 @@ const Biografy: React.FC = () => {
           onClick={() => setActiveImage(child)}
           />
 
-          <label>Click para ampliar</label>
+          <label>Click a la imagen para ampliar</label>
         </div>
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Infancia y origenes</h1>
@@ -79,7 +79,7 @@ const Biografy: React.FC = () => {
           onClick={() => setActiveImage(formation)}
         />
 
-        <label>Click para ampliar</label>
+        <label>Click a la imagen para ampliar</label>
         </div>
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Formación Académica</h1>
@@ -101,7 +101,7 @@ const Biografy: React.FC = () => {
           onClick={() => setActiveImage(medicine)}
         />
 
-        <label>Click para ampliar</label>
+        <label>Click a la imagen para ampliar</label>
         </div>
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Médico y Profesor Universitario</h1>
@@ -123,7 +123,7 @@ const Biografy: React.FC = () => {
           onClick={() => setActiveImage(religion)}
         />
 
-        <label>Click para ampliar</label>
+        <label>Click a la imagen para ampliar</label>
         </div>
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Vida Espiritual y Vocación Religiosa</h1>
@@ -145,7 +145,7 @@ const Biografy: React.FC = () => {
           onClick={() => setActiveImage(legacy)}
         />
 
-        <label>Click para ampliar</label>
+        <label>Click a la imagen para ampliar</label>
         </div>
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Fallecimiento</h1>
