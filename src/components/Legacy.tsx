@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
-import doctor from '../assets/doctor.png';
-import science from '../assets/science.jpg';
-import culture from '../assets/culture.png';
+import doctor from '../assets/doctor.webp';
+import science from '../assets/science.webp';
+import culture from '../assets/culture.webp';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

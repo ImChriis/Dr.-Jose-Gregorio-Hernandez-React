@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import beatification from '../assets/beatification.jpg';
+import beatification from '../assets/beatification.webp';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from "react";
-import formation from '../assets/formation.jpg';
-import medicine from '../assets/medicine.jpg';
-import religion from '../assets/religion.png';
-import legacy from '../assets/legacy.jpg';
-import child from '../assets/childhood.jpg';
+import React, { useEffect, useRef, useState } from "react";
+import formation from '../assets/formation.webp';
+import medicine from '../assets/medicine.webp';
+import religion from '../assets/religion.webp';
+import legacy from '../assets/legacy.webp';
+import child from '../assets/childhood.webp';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Biografy: React.FC = () => {
   const sectionsRef = useRef<Array<HTMLDivElement | null>>([]);
+  const [activeImage, setActiveImage] = useState<string | null>(null);
 
   useEffect(() => {
     sectionsRef.current.forEach((section) => {
@@ -48,7 +49,12 @@ const Biografy: React.FC = () => {
         className="flex items-center space-x-4 w-[90%]"
         ref={el => { sectionsRef.current[0] = el; }}
       >
-        <img src={child} alt="José Gregorio Hernández" className="w-[30%] h-full object-cover rounded" />
+        <img
+          src={child}
+          alt="José Gregorio Hernández"
+          className="w-[30%] h-full object-cover rounded cursor-pointer"
+          onClick={() => setActiveImage(child)}
+        />
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Infancia y origenes</h1>
           <p className="text-wrap-normal text-lg">José Gregorio Hernández Cisneros nació el 26 de octubre de 1864 en Isnotú, un pequeño pueblo enclavado en las montañas del estado Trujillo, Venezuela. Sus padres, Benigno María Hernández Manzaneda y Josefa Antonia Cisneros, le transmitieron una profunda fe cristiana y valores de humildad, honradez y solidaridad.</p>
@@ -61,7 +67,12 @@ const Biografy: React.FC = () => {
         className="flex items-center space-x-4 w-[90%]"
         ref={el => { sectionsRef.current[1] = el; }}
       >
-        <img src={formation} alt="José Gregorio Hernández" className="w-[30%] h-full object-cover rounded" />
+        <img
+          src={formation}
+          alt="José Gregorio Hernández"
+          className="w-[30%] h-full object-cover rounded cursor-pointer"
+          onClick={() => setActiveImage(formation)}
+        />
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Formación Académica</h1>
           <p className="text-wrap-normal text-lg">A la edad de trece años, dejó atrás a su familia y su tierra natal para trasladarse a Caracas, con el propósito de continuar sus estudios. Fue una etapa llena de sacrificios, pues la separación del calor de su hogar no fue fácil, pero también fue un período de grandes oportunidades que marcarían su futuro.</p>
@@ -74,7 +85,12 @@ const Biografy: React.FC = () => {
         className="flex items-center space-x-4 w-[90%]"
         ref={el => { sectionsRef.current[2] = el; }}
       >
-        <img src={medicine} alt="José Gregorio Hernández" className="w-[30%] h-full object-cover rounded" />
+        <img
+          src={medicine}
+          alt="José Gregorio Hernández"
+          className="w-[30%] h-full object-cover rounded cursor-pointer"
+          onClick={() => setActiveImage(medicine)}
+        />
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Médico y Profesor Universitario</h1>
           <p className="text-wrap-normal text-lg">En 1891, José Gregorio regresó a Venezuela cargado de conocimientos y con una clara misión: transformar la medicina en su país. Fue nombrado profesor en la Universidad Central de Venezuela, donde introdujo asignaturas y métodos modernos que hasta entonces eran desconocidos en el país, como la bacteriología, la histología y la fisiología experimental. También fundó y organizó laboratorios, dando un impulso trascendental al desarrollo científico en la nación.</p>
@@ -87,7 +103,12 @@ const Biografy: React.FC = () => {
         className="flex items-center space-x-4 w-[90%]"
         ref={el => { sectionsRef.current[3] = el; }}
       >
-        <img src={religion} alt="José Gregorio Hernández" className="w-[30%] h-full object-cover rounded" />
+        <img
+          src={religion}
+          alt="José Gregorio Hernández"
+          className="w-[30%] h-full object-cover rounded cursor-pointer"
+          onClick={() => setActiveImage(religion)}
+        />
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Vida Espiritual y Vocación Religiosa</h1>
           <p className="text-wrap-normal text-lg">Aunque la medicina fue su camino principal, José Gregorio también sintió desde joven un profundo llamado religioso. Su deseo de servir a Dios lo llevó en varias ocasiones a ingresar a seminarios y conventos, con la intención de convertirse en sacerdote.</p>
@@ -100,13 +121,44 @@ const Biografy: React.FC = () => {
         className="flex items-center space-x-4 w-[90%]"
         ref={el => { sectionsRef.current[4] = el; }}
       >
-        <img src={legacy} alt="José Gregorio Hernández" className="w-[30%] object-cover rounded" />
+        <img
+          src={legacy}
+          alt="José Gregorio Hernández"
+          className="w-[30%] object-cover rounded cursor-pointer"
+          onClick={() => setActiveImage(legacy)}
+        />
         <div className="flex flex-col space-y-4 text-wrap w-[50%]">
           <h1 className="text-2xl font-bold">Fallecimiento</h1>
           <p className="text-wrap-normal text-lg">El 29 de junio de 1919, a los 54 años de edad, la vida de José Gregorio Hernández tuvo un desenlace inesperado y trágico. Mientras se dirigía a comprar medicinas para una enferma a la que atendía, fue atropellado por un automóvil en La Pastora, Caracas.</p>
           <p className="text-wrap-normal text-lg">Su muerte conmocionó a toda Venezuela. El pueblo, que lo veía no solo como un médico, sino como un verdadero santo en vida, se volcó a las calles a llorar su partida. Aquel día nació una devoción popular que no se ha apagado con el tiempo, sino que se ha fortalecido con las generaciones.</p>
         </div>
       </div>
+
+      {activeImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-xs bg-black/70"
+          onClick={() => setActiveImage(null)}
+        >
+          <div
+            className="relative max-w-5xl w-[90%] max-h-[90vh]  rounded-lg overflow-hidden flex items-center justify-center p-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative inline-flex max-h-[80vh] max-w-[90vw] justify-center">
+              <img
+                src={activeImage}
+                alt="Imagen ampliada"
+                className="max-w-full max-h-[80vh] object-contain bg-black"
+              />
+              <button
+                className="absolute top-2 right-2 text-white text-2xl font-bold cursor-pointer rounded-full px-3"
+                onClick={() => setActiveImage(null)}
+              >
+                X
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
