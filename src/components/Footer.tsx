@@ -8,6 +8,7 @@ const Footer: React.FC = () => {
                     <p>Universidad Dr. José Gregorio Hernández, la Universidad de los Valores</p>
                     <p className="text-sm text-white/80 mt-4">Diseño MSc Juan Carlos Medina</p>
                     <p className="text-sm text-white/80">Ingeniero en informática</p>
+                     <p className="text-sm text-white/80">© 2026</p>
                 </div>
             </div>
         </footer>
