@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar';
 import Welcome from './components/Welcome';
 import Biografy from './components/Biografy';
-import Santificatino from './components/Santification';
+import Santification from './components/Santification';
 import Beatification from './components/Beatification';
 import Legacy from './components/Legacy';
 import Prayer from './components/Prayer';
@@ -16,7 +16,7 @@ function App() {
       <main className='flex-1 w-full space-y-55'>
         <Welcome />
         <Biografy />
-        <Santificatino />
+        <Santification />
         <Beatification />
         <Legacy />
         <Prayer />

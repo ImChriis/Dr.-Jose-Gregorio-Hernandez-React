@@ -59,7 +59,7 @@ const Prayer: React.FC = () => {
     return (
         <div id="prayer" className="w-full min-h-screen p-8 space-y-4 flex items-center flex-col gap-32">
             <h1 className="text-4xl font-bold text-white">Oración</h1>
-            <div className="flex flex-col space-y-4 text-wrap w-[90%]" ref={textRef}>
+            <div className="flex flex-col space-y-4 text-wrap w-full px-4" ref={textRef}>
                 <p className="text-wrap-normal text-lg">
                     Una oración a José Gregorio Hernández pide su intercesión como "Médico de los Pobres" para sanar cuerpo y alma, obtener fortaleza y fe, y ayuda para la patria, invocando su caridad, ciencia y virtud para superar enfermedades, dificultades y construir un mundo de justicia y paz, a menudo finalizando con un Padre Nuestro y Ave María. 
                 </p>

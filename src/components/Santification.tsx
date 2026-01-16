@@ -58,8 +58,8 @@ const Beatification: React.FC = () => {
     return (
         <div id="santification" className="w-full min-h-screen p-8 space-y-4 flex justify-center flex-col items-center gap-32">
             <h1 className="text-4xl font-bold text-white">Santificación</h1>
-            <div className="flex flex-row space-y-4 text-wrap w-[90%] gap-8">
-                <div className="flex flex-col space-y-4 text-wrap w-[50%]" ref={textRef}>
+            <div className="w-full flex flex-col lg:flex-row gap-8 px-4">
+                <div className="flex flex-col space-y-4 text-wrap w-full lg:w-1/2" ref={textRef}>
                     <p className="text-wrap-normal text-lg">
                         El camino hacia la santificación de José Gregorio Hernández ha trascendido las fronteras de la religión para convertirse en un fenómeno de identidad nacional y espiritual. Tras su beatificación en 2021, la mirada del mundo católico y de la comunidad científica se mantiene fija en el Vaticano, a la espera del decreto final que lo inscriba oficialmente en el libro de los santos. Este proceso no es solo un trámite eclesiástico; es la culminación de un clamor popular que ha cruzado generaciones, uniendo a creyentes y no creyentes bajo la figura del "Médico de los Pobres".
                     </p>
@@ -70,7 +70,7 @@ const Beatification: React.FC = () => {
                        Hoy, la figura de José Gregorio Hernández se erige como un puente de reconciliación y unidad. Su ascenso a los altares como santo oficial de la Iglesia no solo honraría su memoria, sino que enviaría un mensaje de resiliencia y bondad al mundo entero. En un tiempo que demanda referentes éticos y humanos, su ejemplo de entrega total sigue siendo la luz que guía a un pueblo que espera, con fe renovada, el repique de campanas que anuncie que su "Venerable" es ya, ante los ojos del mundo, el Santo de Venezuela.
                     </p>
                 </div>
-                <img ref={imgRef} src={santification} alt="José Gregorio Hernández" className="w-[50%] h-[100%]" />
+                <img ref={imgRef} src={santification} alt="José Gregorio Hernández" className="w-full lg:w-1/2 h-auto object-cover" />
             </div>
         </div>
     );

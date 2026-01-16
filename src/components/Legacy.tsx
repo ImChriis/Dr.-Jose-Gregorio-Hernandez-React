@@ -62,7 +62,7 @@ const Legacy: React.FC = () => {
     return (
         <div id="legacy" className="w-full min-h-screen p-8 space-y-4 flex items-center flex-col gap-32">
             <h1 className="text-4xl font-bold text-white">Legado</h1>
-            <div className="flex flex-col space-y-4 text-wrap w-[90%]" ref={textRef}>
+            <div className="flex flex-col space-y-4 text-wrap w-full px-4" ref={textRef}>
                 <p className="text-wrap-normal text-lg">
                     El nombre de José Gregorio Hernández trascendió más allá de su tiempo y de su labor médica. Su memoria se convirtió en símbolo de esperanza, fe y consuelo para millones de personas en Venezuela y toda Latinoamérica. En los hogares más humildes, en hospitales y capillas, su imagen es venerada como intercesor ante Dios, especialmente por los enfermos y necesitados. Miles de testimonios dan cuenta de favores y milagros atribuidos a su intercesión, lo que afianzó su fama de santidad.
                 </p>

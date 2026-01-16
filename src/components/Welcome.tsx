@@ -58,19 +58,21 @@ const Welcome: React.FC = () => {
 
     return (
         <>
-            <div className="w-full h-full flex flex-row justify-center items-center gap-4 mt-30">
-                <div className="text-center" ref={textRef}>
-                    <h1 className="text-7xl font-bold">Historia de</h1>
-                    <h1 className="text-7xl">José Gregorio Hernández</h1>
-                    <h2 className="text-4xl">La vida y obra de un hombre de ciencia y fé</h2>
+            <div className="w-full h-full flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12 px-4 sm:px-6 lg:px-12 pt-16 lg:pt-24 mt-4">
+                <div className="w-full lg:w-1/2 text-center lg:text-left space-y-3 lg:space-y-4" ref={textRef}>
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">Historia de</h1>
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight">José Gregorio Hernández</h1>
+                    <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-gray-200">La vida y obra de un hombre de ciencia y fé</h2>
                 </div>
-                <img
-                    ref={imgRef}
-                    src={main}
-                    alt="Main"
-                    className="w-[50%] h-full object-cover mr-6 cursor-pointer"
-                    onClick={() => setIsOpen(true)}
-                />
+                <div className="w-full lg:w-4/">
+                    <img
+                        ref={imgRef}
+                        src={main}
+                        alt="Main"
+                        className="w-full h-auto object-cover rounded-lg shadow-lg cursor-pointer"
+                        onClick={() => setIsOpen(true)}
+                    />
+                </div>
             </div>
 
             {isOpen && (
