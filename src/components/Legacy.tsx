@@ -70,10 +70,10 @@ const Legacy: React.FC = () => {
                 <p className="text-wrap-normal text-lg">
                     Hoy, más de cien años después de su fallecimiento, sigue vivo en el corazón de su pueblo como El médico de los pobres, un hombre que dedicó su existencia a sanar cuerpos y almas, y cuyo legado inspira a vivir con fe, humildad y amor hacia el prójimo.
                 </p>
-                <div className="flex items-start justify-center gap-4">
-                    <img ref={imgRefs[0]} src={doctor} className="w-1/3 h-auto" alt="" />
-                    <img ref={imgRefs[1]} src={culture} className="w-1/3 h-auto" alt="" />
-                    <img ref={imgRefs[2]} src={science} className="w-1/3 h-auto" alt="" />
+                <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <img ref={imgRefs[0]} src={doctor} className="w-full aspect-[4/5] object-cover object-center rounded-lg" alt="" />
+                    <img ref={imgRefs[1]} src={culture} className="w-full aspect-[4/5] object-cover object-center rounded-lg" alt="" />
+                    <img ref={imgRefs[2]} src={science} className="w-full aspect-[4/5] object-cover object-center rounded-lg" alt="" />
                 </div>
             </div>
         </div>

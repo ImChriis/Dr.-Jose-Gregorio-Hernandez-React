@@ -58,7 +58,7 @@ const Welcome: React.FC = () => {
 
     return (
         <>
-            <div className="w-full h-full flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12 px-4 sm:px-6 lg:px-12 pt-16 lg:pt-24 mt-4">
+            <div className="w-full h-full flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12 px-4 sm:px-6 lg:px-12 pt-16 lg:pt-24 mt-4 mb-50">
                 <div className="w-full lg:w-1/2 text-center lg:text-left space-y-3 lg:space-y-4" ref={textRef}>
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">Historia de</h1>
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight">José Gregorio Hernández</h1>
