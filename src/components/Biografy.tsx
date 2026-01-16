@@ -57,7 +57,7 @@ const Biografy: React.FC = () => {
           onClick={() => setActiveImage(child)}
           />
 
-          <label className="mt-2 block">Click a la imagen para ampliar</label>
+          <label className="mt-2 block text-sm text-gray-200 flex items-center gap-2">🔍 Click a la imagen para ampliar</label>
         </div>
         <div className="flex flex-col space-y-4 text-wrap w-full md:w-1/2">
           <h1 className="text-2xl font-bold">Infancia y origenes</h1>
@@ -79,7 +79,7 @@ const Biografy: React.FC = () => {
           onClick={() => setActiveImage(formation)}
         />
 
-        <label className="mt-2 block">Click a la imagen para ampliar</label>
+        <label className="mt-2 block text-sm text-gray-200 flex items-center gap-2">🔍 Click a la imagen para ampliar</label>
         </div>
         <div className="flex flex-col space-y-4 text-wrap w-full md:w-1/2">
           <h1 className="text-2xl font-bold">Formación Académica</h1>
@@ -101,7 +101,7 @@ const Biografy: React.FC = () => {
           onClick={() => setActiveImage(medicine)}
         />
 
-        <label className="mt-2 block">Click a la imagen para ampliar</label>
+        <label className="mt-2 block text-sm text-gray-200 flex items-center gap-2">🔍 Click a la imagen para ampliar</label>
         </div>
         <div className="flex flex-col space-y-4 text-wrap w-full md:w-1/2">
           <h1 className="text-2xl font-bold">Médico y Profesor Universitario</h1>
@@ -123,7 +123,7 @@ const Biografy: React.FC = () => {
           onClick={() => setActiveImage(religion)}
         />
 
-        <label className="mt-2 block">Click a la imagen para ampliar</label>
+        <label className="mt-2 block text-sm text-gray-200 flex items-center gap-2">🔍 Click a la imagen para ampliar</label>
         </div>
         <div className="flex flex-col space-y-4 text-wrap w-full md:w-1/2">
           <h1 className="text-2xl font-bold">Vida Espiritual y Vocación Religiosa</h1>
@@ -145,7 +145,7 @@ const Biografy: React.FC = () => {
           onClick={() => setActiveImage(legacy)}
         />
 
-        <label className="mt-2 block">Click a la imagen para ampliar</label>
+        <label className="mt-2 block text-sm text-gray-200 flex items-center gap-2">🔍 Click a la imagen para ampliar</label>
         </div>
         <div className="flex flex-col space-y-4 text-wrap w-full md:w-1/2">
           <h1 className="text-2xl font-bold">Fallecimiento</h1>

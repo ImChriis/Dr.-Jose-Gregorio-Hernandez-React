@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import main from "../assets/main.webp";
+import santification from "../assets/santification.webp";
+import medicine from "../assets/medicine.webp";
+import religion from "../assets/religion.webp";
+import beatification from "../assets/beatification.webp";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -8,8 +12,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Welcome: React.FC = () => {
     const textRef = useRef<HTMLDivElement>(null);
-    const imgRef = useRef<HTMLImageElement>(null);
-    const [isOpen, setIsOpen] = useState(false);
+    const imgRef = useRef<HTMLDivElement>(null);
+    const [current, setCurrent] = useState(0);
+    const intervalRef = useRef<number | null>(null);
+
+    const slides = [main, santification, medicine, religion, beatification];
+
+    const startAutoPlay = () => {
+        if (intervalRef.current) clearInterval(intervalRef.current);
+        intervalRef.current = setInterval(() => {
+            setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+        }, 5000);
+    };
 
     useEffect(() => {
         if (textRef.current) {
@@ -53,8 +67,26 @@ const Welcome: React.FC = () => {
         }
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            if (intervalRef.current) clearInterval(intervalRef.current);
         };
     }, []);
+
+    useEffect(() => {
+        startAutoPlay();
+        return () => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [current]);
+
+    const prevSlide = () => {
+        startAutoPlay();
+        setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    };
+    const nextSlide = () => {
+        startAutoPlay();
+        setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    };
 
     return (
         <>
@@ -64,38 +96,52 @@ const Welcome: React.FC = () => {
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight">José Gregorio Hernández</h1>
                     <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-gray-200">La vida y obra de un hombre de ciencia y fé</h2>
                 </div>
-                <div className="w-full lg:w-4/">
-                    <img
-                        ref={imgRef}
-                        src={main}
-                        alt="Main"
-                        className="w-full h-auto object-cover rounded-lg shadow-lg cursor-pointer"
-                        onClick={() => setIsOpen(true)}
-                    />
-                </div>
-            </div>
-
-            {isOpen && (
-                <div
-                    className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-xs bg-black/70 h-full"
-                    onClick={() => setIsOpen(false)}
-                >
-                    <div
-                        className="relative max-w-5xl w-[90%] max-h-[90vh] rounded-lg overflow-hidden flex items-center justify-center p-4"
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        <div className="relative inline-flex max-h-[80vh] max-w-[90vw] justify-center">
-                            <img src={main} alt="Main enlarged" className="max-w-full max-h-[80vh] object-contain bg-black" />
-                            <button
-                                className="absolute top-2 right-2 text-white text-2xl font-bold cursor-pointer bg-black/70 rounded-full px-3"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                X
-                            </button>
+                <div className="w-full lg:w-4/4">
+                    <div ref={imgRef} className="relative w-full rounded-lg overflow-hidden shadow-lg">
+                        <div className="relative w-full aspect-[4/3]">
+                            {slides.map((src, idx) => (
+                                <img
+                                    key={src}
+                                    src={src}
+                                    alt={`Slide ${idx + 1}`}
+                                    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-in-out ${idx === current ? 'opacity-100' : 'opacity-0'}`}
+                                    aria-hidden={idx !== current}
+                                />
+                            ))}
+                        </div>
+                        <button
+                            type="button"
+                            onClick={prevSlide}
+                            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full p-2 hover:bg-black/70"
+                            aria-label="Anterior"
+                        >
+                            ‹
+                        </button>
+                        <button
+                            type="button"
+                            onClick={nextSlide}
+                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full p-2 hover:bg-black/70"
+                            aria-label="Siguiente"
+                        >
+                            ›
+                        </button>
+                        <div className="absolute bottom-3 inset-x-0 flex justify-center gap-2">
+                            {slides.map((_, idx) => (
+                                <button
+                                    type="button"
+                                    key={idx}
+                                    onClick={() => {
+                                        startAutoPlay();
+                                        setCurrent(idx);
+                                    }}
+                                    className={`h-2 w-2 rounded-full transition-colors ${idx === current ? 'bg-white' : 'bg-white/40'}`}
+                                    aria-label={`Ir al slide ${idx + 1}`}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
-            )}
+            </div>
         </>
     );
 }

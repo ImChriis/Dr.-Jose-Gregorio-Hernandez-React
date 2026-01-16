@@ -6,6 +6,7 @@ import Beatification from './components/Beatification';
 import Legacy from './components/Legacy';
 import Prayer from './components/Prayer';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Legacy />
         <Prayer />
       </main>
+      <ScrollToTop />
       <Footer />
     </div>
   )

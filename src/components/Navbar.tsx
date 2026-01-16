@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
                 </button>
 
                 <ul
-                    className={`flex flex-col space-y-3 absolute left-0 right-0 top-full bg-[#121212] bg-opacity-95 backdrop-blur-md px-6 py-4 transition-all duration-200
+                    className={`flex flex-col space-y-3 absolute left-0 right-0 top-full bg-[#ff1414] bg-opacity-95 backdrop-blur-md px-6 py-4 transition-all duration-200
                         ${isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'}
                         lg:relative lg:top-auto lg:left-auto lg:right-auto lg:flex-row lg:space-y-0 lg:space-x-4 lg:bg-transparent lg:p-0 lg:backdrop-blur-none lg:opacity-100 lg:translate-y-0 lg:pointer-events-auto lg:transition-none
                     `}
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
                         <li key={href} className="md:py-0">
                             <a
                                 href={href}
-                                className="block text-white hover:text-gray-300 transition-colors"
+                                className="block text-white transition-colors duration-200 hover:!text-blue-500 focus-visible:!text-blue-500 focus-visible:outline-none focus-visible:underline"
                                 onClick={handleLinkClick}
                             >
                                 {label}
