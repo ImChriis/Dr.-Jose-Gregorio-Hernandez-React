@@ -70,7 +70,7 @@ const Beatification: React.FC = () => {
                         Este reconocimiento marcó un paso decisivo hacia su futura canonización, abriendo la posibilidad de que en un futuro cercano sea declarado Santo. Desde entonces, la devoción hacia el Beato José Gregorio Hernández ha continuado creciendo, inspirando a nuevas generaciones que ven en su figura un ejemplo vivo de cómo se puede servir a Dios y a la humanidad con amor, sacrificio y entrega total.
                     </p>
                 </div>
-                <img ref={imgRef} src={beatification} alt="José Gregorio Hernández" className="w-full lg:w-1/2 h-auto object-cover" />
+                <img ref={imgRef} src={beatification} alt="José Gregorio Hernández" className="w-full lg:w-1/2 h-auto object-cover rounded-lg" />
             </div>
         </div>
     );

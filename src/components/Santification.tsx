@@ -70,7 +70,7 @@ const Beatification: React.FC = () => {
                        Hoy, la figura de José Gregorio Hernández se erige como un puente de reconciliación y unidad. Su ascenso a los altares como santo oficial de la Iglesia no solo honraría su memoria, sino que enviaría un mensaje de resiliencia y bondad al mundo entero. En un tiempo que demanda referentes éticos y humanos, su ejemplo de entrega total sigue siendo la luz que guía a un pueblo que espera, con fe renovada, el repique de campanas que anuncie que su "Venerable" es ya, ante los ojos del mundo, el Santo de Venezuela.
                     </p>
                 </div>
-                <img ref={imgRef} src={santification} alt="José Gregorio Hernández" className="w-full lg:w-1/2 h-auto object-cover" />
+                <img ref={imgRef} src={santification} alt="José Gregorio Hernández" className="w-full lg:w-1/2 h-auto object-cover rounded-lg" />
             </div>
         </div>
     );

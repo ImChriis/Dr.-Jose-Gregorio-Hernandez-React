@@ -53,7 +53,7 @@ const Biografy: React.FC = () => {
           <img
           src={child}
           alt="José Gregorio Hernández"
-          className="w-full h-auto object-cover rounded cursor-pointer"
+          className="w-full h-auto object-cover rounded-lg cursor-pointer"
           onClick={() => setActiveImage(child)}
           />
 
@@ -75,7 +75,7 @@ const Biografy: React.FC = () => {
           <img
           src={formation}
           alt="José Gregorio Hernández"
-          className="w-full h-auto object-cover rounded cursor-pointer"
+          className="w-full h-auto object-cover rounded-lg cursor-pointer"
           onClick={() => setActiveImage(formation)}
         />
 
@@ -97,7 +97,7 @@ const Biografy: React.FC = () => {
            <img
           src={medicine}
           alt="José Gregorio Hernández"
-          className="w-full h-auto object-cover rounded cursor-pointer"
+          className="w-full h-auto object-cover rounded-lg cursor-pointer"
           onClick={() => setActiveImage(medicine)}
         />
 
@@ -119,7 +119,7 @@ const Biografy: React.FC = () => {
            <img
           src={religion}
           alt="José Gregorio Hernández"
-          className="w-full h-auto object-cover rounded cursor-pointer"
+          className="w-full h-auto object-cover rounded-lg cursor-pointer"
           onClick={() => setActiveImage(religion)}
         />
 
@@ -141,7 +141,7 @@ const Biografy: React.FC = () => {
             <img
           src={legacy}
           alt="José Gregorio Hernández"
-          className="w-full h-auto object-cover rounded cursor-pointer"
+          className="w-full h-auto object-cover rounded-lg cursor-pointer"
           onClick={() => setActiveImage(legacy)}
         />
 
@@ -160,7 +160,7 @@ const Biografy: React.FC = () => {
           onClick={() => setActiveImage(null)}
         >
           <div
-            className="relative max-w-5xl w-[90%] max-h-[90vh]  rounded-lg overflow-hidden flex items-center justify-center p-4"
+            className="relative max-w-5xl w-[90%] max-h-[90vh]  rounded-lg-lg overflow-hidden flex items-center justify-center p-4"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative inline-flex max-h-[80vh] max-w-[90vw] justify-center">
@@ -170,7 +170,7 @@ const Biografy: React.FC = () => {
                 className="max-w-full max-h-[80vh] object-contain bg-black"
               />
               <button
-                className="absolute top-2 right-2 text-white text-2xl font-bold cursor-pointer rounded-full bg-black/70 px-3"
+                className="absolute top-2 right-2 text-white text-2xl font-bold cursor-pointer rounded-lg-full bg-black/70 px-3"
                 onClick={() => setActiveImage(null)}
               >
                 X
