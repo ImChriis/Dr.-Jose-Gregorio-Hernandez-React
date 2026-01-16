@@ -11,9 +11,9 @@ function App() {
 
 
   return (
-    <div id='welcome' className='w-full min-h-screen flex flex-col'>
+    <div id='welcome' className='w-screen min-h-screen flex flex-col overflow-x-hidden'>
       <Navbar />
-      <main className='flex-1 w-full space-y-55'>
+      <main className='flex-1 w-full'>
         <Welcome />
         <Biografy />
         <Santification />
